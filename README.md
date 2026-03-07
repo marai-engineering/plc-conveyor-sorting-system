@@ -30,8 +30,6 @@ The automation sequence works as follows:
 
 ---
 
-# Ladder Logic
-
 ## Ladder Logic
 
 <p align="center">
@@ -74,7 +72,6 @@ The automation sequence works as follows:
 
 ---
 
-# Function Block Diagram (FBD)
 
 ## Function Block Diagram (FBD)
 
