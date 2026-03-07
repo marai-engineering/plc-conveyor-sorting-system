@@ -1,7 +1,7 @@
 # PLC Conveyor Sorting System (Siemens LOGO!)
 
 <p align="center">
-<img src="images/render.jpg" width="750">
+<img src="images/render.JPG" width="750">
 </p>
 
 This project demonstrates a simple PLC-controlled automation system that sorts workpieces on a conveyor using a metal sensor and a simulated SCARA-robot pick-and-place operation.
