@@ -1,8 +1,10 @@
 # PLC Conveyor Sorting System (Siemens LOGO!)
 
-This project demonstrates a simple **PLC-based conveyor sorting system** programmed in **Siemens LOGO! Soft Comfort**.
+<p align="center">
+<img src="images/render.jpg" width="750">
+</p>
 
-The system detects objects on a conveyor, determines whether they are **metal or plastic**, and triggers a **robot pick-and-place sequence** to sort them.
+This project demonstrates a simple PLC-controlled automation system that sorts workpieces on a conveyor using a metal sensor and a simulated SCARA-robot pick-and-place operation.
 
 The program includes:
 
