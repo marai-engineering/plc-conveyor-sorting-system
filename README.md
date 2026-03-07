@@ -32,9 +32,11 @@ The automation sequence works as follows:
 
 # Ladder Logic
 
-The ladder diagram shows the control logic of the system.
+## Ladder Logic
 
-![Ladder Logic](images/lad_plc.png)
+<p align="center">
+<img src="images/lad_plc.png" width="500">
+</p>
 
 ---
 
@@ -74,10 +76,11 @@ The ladder diagram shows the control logic of the system.
 
 # Function Block Diagram (FBD)
 
-The program was created using **Function Block Diagram (FBD)** in Siemens LOGO!.
+## Function Block Diagram (FBD)
 
-![Function Block Diagram](images/fbd_plc.png)
-
+<p align="center">
+<img src="images/fbd_plc.png" width="500">
+</p>
 ---
 
 # Safety Feature
