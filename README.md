@@ -99,5 +99,5 @@ When the emergency stop is activated, the conveyor and system logic are immediat
 
 # Author
 
-Mechanical Engineering Student  
+Marai Abed Alrahman  
 Budapest University of Technology and Economics (BME)
