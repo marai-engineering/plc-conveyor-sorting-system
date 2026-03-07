@@ -1,103 +1,93 @@
 # PLC Conveyor Sorting System (Siemens LOGO!)
 
 <p align="center">
-<img src="images/render.JPG" width="750">
+  <img src="images/render.JPG" width="750"/>
 </p>
 
-This project demonstrates a simple PLC-controlled automation system that sorts workpieces on a conveyor using a metal sensor and a simulated SCARA-robot pick-and-place operation.
+A simple PLC automation project that sorts workpieces on a conveyor using a metal sensor and a simulated SCARA robot pick-and-place operation.
 
-The program includes:
+**Main features**
 
-- Start/Stop conveyor control
-- Emergency stop safety
-- Object detection
-- Metal / plastic classification
-- Robot pick-and-place sequence
-- Timer-based delays
+* Conveyor start/stop control
+* Emergency stop safety
+* Workpiece detection
+* Metal vs plastic classification
+* Robot pick-and-place sequence
+* Timer-based delays
 
 ---
 
 # System Overview
 
-The automation sequence works as follows:
+1. **Start Button** starts the conveyor motor.
+2. **Workpiece Sensor** detects an object on the conveyor.
+3. **Metal Sensor** determines if the object is metal.
+4. The correct sorting output is activated:
 
-1. The **Start Button** starts the conveyor motor.
-2. A **Workpiece Sensor** detects an object on the conveyor.
-3. A **Metal Sensor** checks whether the object is metal.
-4. The system activates the correct sorting output:
-   - Metal objects → **Metal Sorter**
-   - Non-metal objects → **Plastic Sorter**
-5. If the robot is ready, it performs a **pick operation**.
-6. After a short delay, the robot performs a **place operation**.
+   * Metal → **Metal Sorter**
+   * Non-metal → **Plastic Sorter**
+5. If the robot is ready, it performs a **pick** operation.
+6. After a delay, the robot performs a **place** operation.
 
 ---
 
-## Ladder Logic
+# Ladder Logic
 
 <p align="center">
-<img src="images/lad_plc.png" width="500">
+  <img src="images/lad_plc.png" width="500"/>
 </p>
 
 ---
 
-# System Inputs
+# Inputs
 
-| Input | Name | Description |
-|------|------|-------------|
-| I1 | Start_Button | Starts the conveyor system |
-| I2 | Stop_Button | Stops the conveyor |
-| I3 | Workpiece_Sensor | Detects object on conveyor |
-| I4 | Metal_Sensor | Detects metal objects |
-| I5 | Robot_Ready | Indicates robot is ready |
-| I6 | Emergency_Stop | Immediately stops the system |
+| Input | Name             | Function                     |
+| ----- | ---------------- | ---------------------------- |
+| I1    | Start_Button     | Starts the conveyor          |
+| I2    | Stop_Button      | Stops the conveyor           |
+| I3    | Workpiece_Sensor | Detects objects              |
+| I4    | Metal_Sensor     | Detects metal                |
+| I5    | Robot_Ready      | Robot ready signal           |
+| I6    | Emergency_Stop   | Stops the system immediately |
 
 ---
 
-# System Outputs
+# Outputs
 
-| Output | Name | Description |
-|------|------|-------------|
-| Q1 | Conveyor_Motor | Drives the conveyor belt |
-| Q2 | Plastic_Sorter | Activates plastic sorting mechanism |
-| Q3 | Metal_Sorter | Activates metal sorting mechanism |
-| Q4 | Robot_Pick | Robot picks the object |
-| Q5 | Robot_Place | Robot places the object |
+| Output | Name           | Function                |
+| ------ | -------------- | ----------------------- |
+| Q1     | Conveyor_Motor | Drives the conveyor     |
+| Q2     | Plastic_Sorter | Sorts plastic objects   |
+| Q3     | Metal_Sorter   | Sorts metal objects     |
+| Q4     | Robot_Pick     | Robot picks the object  |
+| Q5     | Robot_Place    | Robot places the object |
 
 ---
 
 # Timers
 
-| Timer | Name | Function |
-|------|------|----------|
-| B007 | Pick_Delay | Simulates time needed for robot to pick object |
-| B008 | Place_Delay | Simulates time needed for robot to place object |
+| Timer | Name        | Function                 |
+| ----- | ----------- | ------------------------ |
+| B007  | Pick_Delay  | Delay before robot pick  |
+| B008  | Place_Delay | Delay before robot place |
 
 ---
 
-
-## Function Block Diagram (FBD)
+# Function Block Diagram (FBD)
 
 <p align="center">
-<img src="images/fbd_plc.png" width="500">
+  <img src="images/fbd_plc.png" width="500"/>
 </p>
----
-
-# Safety Feature
-
-The system includes an **Emergency Stop** input.
-
-When the emergency stop is activated, the conveyor and system logic are immediately disabled to simulate industrial safety behavior.
 
 ---
 
-# Software Used
+# Software
 
-- Siemens **LOGO! Soft Comfort**
-- PLC simulation
-- Ladder Logic (LAD)
-- Function Block Diagram (FBD)
+* Siemens **LOGO! Soft Comfort**
+* PLC Simulation
+* Ladder Logic (LAD)
+* Function Block Diagram (FBD)
 
----
 
 # Author
 
